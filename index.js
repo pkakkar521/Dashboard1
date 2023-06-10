@@ -7,6 +7,7 @@ const mongoose=require('mongoose')
 require('./db/config');
 const User = require('./db/User')
 const Products = require('./db/Product')
+const Personal = require('./db/Personal')
 
 
 const app=express();
@@ -20,6 +21,13 @@ app.post("/register",async(req,resp)=>{
     delete result.password
     resp.send(result);
 })
+app.post("/reg",async(req,resp)=>{
+    let user=new Personal(req.body);
+    let result=await user.save();
+    result=result.toObject();
+    resp.send(result);
+})
+
 app.post("/login",async(req,resp)=>{
     if(req.body.password && req.body.name){
         let user=await User.findOne(req.body).select("-password");

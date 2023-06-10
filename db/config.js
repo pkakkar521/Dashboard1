@@ -1,2 +1,2 @@
 const mongoose=require('mongoose')
-mongoose.connect('mongodb://127.0.0.1:27017/pratham');
+mongoose.connect('mongodb+srv://anshkakkar399:IITjee123@cluster0.rncjx3h.mongodb.net/pratham?retryWrites=true&w=majority');
