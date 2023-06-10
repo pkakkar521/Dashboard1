@@ -8,7 +8,7 @@ require('./db/config');
 const User = require('./db/User')
 const Products = require('./db/Product')
 const Personal = require('./db/Personal')
-
+const BASE_URL = process.env.BASE_URL
 
 const app=express();
 app.use(express.json());
