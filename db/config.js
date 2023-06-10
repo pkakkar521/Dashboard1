@@ -1,3 +1,3 @@
 const mongoose=require('mongoose')
-const DATABASE = process.env.DATABASE
-mongoose.connect('${DATABASE}');
+
+mongoose.connect('mongodb://127.0.0.1:27017/pratham');
